@@ -1,6 +1,6 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpException, HttpStatus, Post } from '@nestjs/common';
 import { CreditCardsService } from '../services/creditCards.service';
-import { CreditCards } from '../entities/creditCards.entity';
+import { CreditCard } from '../entities/creditCards.entity';
 
 @Controller('creditcards')
 export class CreditCardsController {
@@ -8,12 +8,12 @@ export class CreditCardsController {
   }
 
   @Get()
-  async findAllCreditCards(): Promise<CreditCards[]> {
+  async findAllCreditCards(): Promise<CreditCard[]> {
     return await this.cardsService.findAllCreditCards();
   }
 
   @Post('/add')
-  addNewCreditCard(@Body() data: CreditCards): Promise<CreditCards> {
+  addNewCreditCard(@Body() data: CreditCard): Promise<CreditCard> {
     return this.cardsService.addNewCreditCard(data);
   }
 }

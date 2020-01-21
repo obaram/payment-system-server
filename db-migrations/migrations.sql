@@ -25,19 +25,20 @@ INSERT INTO shoes ("productName","productColor","productSize","productPrice")
 VALUES ('Reebok Classic','Green', '41', 360);
 
 
-CREATE TABLE credit_cards
+CREATE TABLE credit_card
   (
     "id" SERIAL,
   	"cardNumber" VARCHAR,
   	"cardHolder" VARCHAR,
-  	"expiredDate" DATE,
+  	"expirationMonth" INTEGER,
+	"expirationYear" INTEGER,
   	"ccvCode" VARCHAR,
   	CONSTRAINT cards_pkey PRIMARY KEY (id)
   );
 
-  INSERT INTO credit_cards ("cardNumber","cardHolder","expiredDate","ccvCode")
-  VALUES ('4543 5463 6574 7658','John Doe', '2020/01/20','123');
+  INSERT INTO credit_card ("cardNumber","cardHolder","expirationMonth","expirationYear","ccvCode")
+  VALUES ('5764 4321 6321 7543','John Doe', '20','12','356');
 
-  INSERT INTO credit_cards ("cardNumber","cardHolder","expiredDate","ccvCode")
-  VALUES ('5764 4321 6321 7543','John Doe', '2025/03/20','123')
+  INSERT INTO credit_card ("cardNumber","cardHolder","expirationMonth","expirationYear","ccvCode")
+  VALUES ('5764 4321 6321 7543','John Doe', '20','12','123');
 

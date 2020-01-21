@@ -2,10 +2,10 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CreditCardsController } from './controllers/creditCards.controller';
 import { CreditCardsService } from './services/creditCards.service';
-import { CreditCards } from './entities/creditCards.entity';
+import { CreditCard } from './entities/creditCards.entity';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([CreditCards])],
+  imports: [TypeOrmModule.forFeature([CreditCard])],
   controllers: [CreditCardsController],
   providers: [CreditCardsService],
 })

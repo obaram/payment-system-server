@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class CreditCards {
+export class CreditCard {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -12,7 +12,10 @@ export class CreditCards {
   cardHolder: string;
 
   @Column()
-  expiredDate: string;
+  expirationMonth: string;
+
+  @Column()
+  expirationYear: string;
 
   @Column()
   ccvCode: string;

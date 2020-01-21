@@ -1,19 +1,19 @@
 import { Body, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CreditCards } from '../entities/creditCards.entity';
+import { CreditCard } from '../entities/creditCards.entity';
 import { Repository } from 'typeorm';
 
 
 @Injectable()
 export class CreditCardsService {
-  constructor(@InjectRepository(CreditCards) private readonly creditCardsRepository: Repository<CreditCards>) {
+  constructor(@InjectRepository(CreditCard) private readonly creditCardsRepository: Repository<CreditCard>) {
   }
 
-  async findAllCreditCards(): Promise<CreditCards[]> {
+  async findAllCreditCards(): Promise<CreditCard[]> {
     return this.creditCardsRepository.find();
   }
 
-  async addNewCreditCard(card: CreditCards): Promise<CreditCards> {
+  async addNewCreditCard(card: CreditCard): Promise<CreditCard> {
     return this.creditCardsRepository.save(card);
   }
 }

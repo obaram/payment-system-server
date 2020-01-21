@@ -28,6 +28,13 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Setting up Database
+```bash
+# Projekt działa w oparciu o postgre SQL
+# Migracje bazy danych są zawarte w folderze db-igrations/ migrations.sql
+# Należy zmienić dane do połączenia z bazą danych w pliku .env
+```
+
 ## Installation
 
 ```bash
